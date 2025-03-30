@@ -55,7 +55,7 @@ public:
     static void on_uv_remote_addr_resolved(uv_getaddrinfo_t*, int, struct addrinfo*);
     static void on_uv_forward_connected(uv_connect_t*, int);
     static void free_write_req(uv_write_t*);
-    // �������� handle����������
+    // clear handles
     static void assiateHandles(Context*);
     static void on_uv_read_from_remote(uv_stream_t*, ssize_t, const uv_buf_t*);
     static void alloc_buffer(uv_handle_t*, size_t, uv_buf_t*);

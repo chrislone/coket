@@ -18,7 +18,6 @@ namespace {
 
 void Context::on_uv_read_from_remote(uv_stream_t* client, ssize_t nread, const uv_buf_t* buf) {
     Context* context = (Context*)client->data;
-    // ��Ҫ���ܺ��ٴ��ظ��ͻ���
     if (nread > 0) {
         int err = SSL_write(context->clientSSLItem, buf->base, nread);
         if (err < 0) {
